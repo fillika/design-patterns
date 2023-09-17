@@ -3,16 +3,16 @@ const ConcreteComponent = require("./components/concrete");
 const ConcreteDecoratorA = require("./decorators/concreteDecoratorA");
 const ConcreteDecoratorB = require("./decorators/concreteDecoratorB");
 
-function clineCode(component) {
+function clientCode(component) {
     console.log(`RESULT: ${component.operation()}`);
     console.log(``);
 }
 
 let simple = new ConcreteComponent;
 console.log(`I've got a simple component`);
-clineCode(simple);
+clientCode(simple);
 
 let decorator1 = new ConcreteDecoratorA(simple);
 let decorator2 = new ConcreteDecoratorB(decorator1);
 console.log(`Client: Now I've got a decorated component`);
-clineCode(decorator2);
+clientCode(decorator2);
