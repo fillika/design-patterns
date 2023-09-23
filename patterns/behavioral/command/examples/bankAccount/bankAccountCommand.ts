@@ -1,12 +1,12 @@
-import { IBankAccount } from "./bankAccount";
+import { BankAccount } from "./bankAccount";
 import Actions from "./actions";
 
 class BankAccountCommand {
-  private account: IBankAccount;
+  private account: BankAccount;
   private action: Actions;
   private amount: number;
 
-  constructor(account: IBankAccount, action: Actions, amount: number) {
+  constructor(account: BankAccount, action: Actions, amount: number) {
     this.account = account;
     this.action = action;
     this.amount = amount;
